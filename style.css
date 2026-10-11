@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#home {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(assets/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#home h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+#home p {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #19b5fe;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#home .btn {
+    background-color: #172936;
+}
+
+#home .btn:hover {
+    background-color: #29485c;
+}
+
+#gallery .btn {
+    background-color: #19b5fe;
+    margin-top: 25px;
+}
+
+#gallery .btn:hover {
+    background-color: #0d8ac7;
+
+}
+
+.sidebar {
+    width: 70px;
+    height: 100vh;
+    background-color: #172936;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding-top: 30px;
+    z-index: 1000;
+}
+
+.sidebar a {
+    color: white;
+}
+
+.sidebar a:hover {
+    color: #20bfff;
+
+}
+
+main,
+footer {
+    margin-left: 70px;
+}
+
+#gallery {
+    padding: 50px 30px;
+    text-align: center;
+}
+
+#gallery h2 {
+    margin-bottom: 30px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery-container img {
+    width: calc((100% - 30px)/4);
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-section {
+    display: flex;
+}
+
+#about {
+    width: 50%;
+    background-color: #e6e6e6;
+    padding: 50px;
+}
+
+#contact {
+    width: 50%;
+    background-color: #e6e6e6;
+    padding: 50px;
+}
+
+#about h2 {
+    margin-bottom: 30px;
+}
+
+#about p {
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #19b5fe;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.social-icons a:hover {
+    color: #172936;
+}
+
+
+#contact h2 {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.send-btn {
+    display: block;
+    width: 100%;
+    background-color: #19b5fe;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: #0d8ac7;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    color: #999;
+    font-size: 13px;
+}
+
+footer a {
+    color: #19b5fe;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:768px) {
+    .sidebar {
+        width: 50px;
+        padding-top: 20px;
+        gap: 25px;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+    }
+
+    main,
+    footer {
+        margin-left: 50px;
+    }
+
+    #home {
+        min-height: 300px;
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    #home h1 {
+        font-size: 24px;
+    }
+
+    #home p {
+        font-size: 13px;
+    }
+
+    #gallery {
+        padding: 30px 15px;
+    }
+
+    .gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .gallery-container img {
+        width: calc((100% - 10px)/2);
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .info-section {
+        flex-direction: column;
+    }
+
+    #about,
+    #contact {
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .form-group input , .form-group textarea {
+        width: 100%;
+    }
+    .send-btn {
+        width: 100%;
+    }
+    footer {
+        padding: 20px 10px;
+    }
+    footer p {
+        font-size: 10px;
+    }
+}
